@@ -6,4 +6,4 @@ if (isset($_POST['name'])) {
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
     echo "<br>With The Email Id OF : " . $email . "<br>";
-}
+} 
