@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Student</title>
+</head>
+
+<body>
+    <form method="post" id="studentForm">
+        <label for="stuId">Enter Student ID:</label>
+        <input type="text" name="stuId" id="stuId">
+        <label for="stuName">Enter Student Name:</label>
+        <input type="text" name="stuName" id="stuName">
+        <label for="mob">Enter Mobile:</label>
+        <input type="text" name="mob" id="mob">
+        <label for="country">Enter Country:</label>
+        <input type="text" name="country" id="country">
+        <button type="button" onclick="checkStudent()">Check/Add Student</button>
+        <div id="result"></div>
+        <script>
+            function checkStudent() {
+                var stuId = document.getElementById("stuId").value;
+                var stuName = document.getElementById("stuName").value;
+                var mob = document.getElementById("mob").value;
+                var country = document.getElementById("country").value;
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "./Prog2.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        document.getElementById("result").innerHTML = xhr.responseText;
+                    }
+                };
+                var params = "stuId=" + stuId + "&stuName=" + stuName + "&mob=" + mob + "&country=" + country;
+                xhr.send(params);
+            }
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with AJAX</title>
+</head>
+
+<body>
+    <form id="myForm" method="post">
+        <label for="inputField">Enter Text:</label>
+        <input type="text" id="inputField" name="inputField" onkeyup="validateForm()">
+        <div id="result" style="color: red;"></div>
+    </form>
+
+
+    <script>
+        function validateForm() {
+            var inputField = document.getElementById('inputField').value;
+            var resultDiv = document.getElementById('result');
+
+
+            var xhr = new XMLHttpRequest();
+
+
+            xhr.open('POST', './Prog6.php?q=' + inputField, true);
+
+            xhr.onload = function () {
+                // if (xhr.readyState == 4 && xhr.status == 200) {
+                resultDiv.innerHTML = xhr.responseText;
+                // }
+            };
+
+
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

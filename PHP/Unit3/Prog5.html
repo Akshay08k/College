@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function getresults(str) {
+            if (str.length == 0) {
+                document.getElementById("txtResult").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtResult").innerHTML = this.responseText;
+                    }
+                }
+                xmlhttp.open("GET", "./Prog5.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }   
+    </script>
+</head>
+
+<body>
+    <b>Enter Name:</b>
+    <form action="">
+        <input type="radio" name="gender" value="male" onclick="getresults(this.value)">Male<br>
+        <input type="radio" name="gender" value="female" onclick="getresults(this.value)">Female<br>
+        <input type="radio" name="gender" value="other" onclick="getresults(this.value)">Other<br>
+
+        Result: <span id="txtResult"></span>
+</body>
+
+</html>

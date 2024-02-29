@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="Dropdown">Select the company</label>
+        <select name="Dropdown" id="Dropdown" onchange="call(this.value)">
+            <option value="samsung">samsung</option>
+            <option value="oppo">oppo</option>
+            <option value="vivo">vivo</option>
+            <option value="apple">apple</option>
+            <option value="motorola">motorola</option>
+        </select>
+        <div class="result"></div>
+    </form>
+    <script>
+        function call(value) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', './Prog4.php?q=' + value, true);
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.querySelector('.result').innerHTML = xhr.responseText;
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

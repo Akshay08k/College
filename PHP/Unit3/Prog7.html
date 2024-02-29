@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 10px;
+            width: 250px;
+        }
+
+        #result {
+            color: green;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Email Validation</h2>
+
+    <input type="text" id="email" placeholder="Enter your email" onkeyup="validateEmail()">
+
+    <div id="result"></div>
+    <div id="error"></div>
+
+    <script>
+        function validateEmail() {
+            var email = document.getElementById('email').value.trim();
+            var resultDiv = document.getElementById('result');
+            var errorDiv = document.getElementById('error');
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                resultDiv.textContent = 'Email is valid!';
+                errorDiv.textContent = '';
+            } else {
+                resultDiv.textContent = '';
+                errorDiv.textContent = 'Invalid email format. Please enter a valid email.';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

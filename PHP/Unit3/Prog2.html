@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="get">
+        <label for="Name">Enter the name:(onkeyup)</label>
+        <input type="text" name="name" id="Name" onkeyup="call(this.value)">
+        <label for="Name">Enter the name:(onkeydown)</label>
+        <input type="text" name="name" id="Name" onkeydown="call(this.value)">
+        <div class="result"></div>
+        <script>
+            function call(text) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", './Prog1.php?q=' + text, true);  //the php file for program one and two are same so not change in that
+                xhr.onreadystatechange = () us == 200) {
+                        document.querySelector('.result=> {
+                    if (xhr.readyState == 4 && xhr.stat').innerHTML = xhr.responseText;
+                    }
+                }
+                xhr.send();
+            }
+        </script>
+    </form>
+</body>
+
+</html>
