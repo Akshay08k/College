@@ -1,6 +1,6 @@
 <?php
 $myArray = array(2, 4, 5, 6, 4, 2, 4, 8, 4, 10, 4);
-$specificValue = 4;
+$specificValue = 4; //Mention Here the specific value
 
 $count = 0;
 

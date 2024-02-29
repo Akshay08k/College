@@ -14,9 +14,13 @@ $StudentData = array(
     ),
 );
 
+$keys = array_keys($student1);
+print_r($keys);
+$i = 0;
 echo "<br>Name of student : " . $StudentData[0]['name'];
 echo "<br>Age Of Student : " . $StudentData[0]['age'];
 echo "<br>Name of student : " . $StudentData[1]['name'];
 echo "<br>Age Of Student : " . $StudentData[1]['age'];
 echo "<br>Name of student : " . $StudentData[2]['name'];
 echo "<br>Age Of Student : " . $StudentData[2]['age'];
+
