@@ -1,3 +1,3 @@
 #!/bin/bash
 
-who | grep ^s
+whoami | grep ^a

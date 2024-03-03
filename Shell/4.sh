@@ -6,7 +6,6 @@ echo "2. Delete directory with files"
 echo "3. Interactive copying"
 echo "4. Interactive deletion of files"
 echo "5. Explain two functionalities of 'mv' command"
-
 read option
 
 case $option in

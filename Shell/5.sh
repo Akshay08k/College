@@ -1,47 +1,33 @@
-#!/bin/bash
-
-echo "Select an option:"
-echo "1. Create a file called text and store name, age, and address in it."
-echo "2. Display the contents of the file text on the screen."
-echo "3. Delete the directories mydir and newdir at once."
-echo "4. Sort a numeric file."
-echo "5. Change the permissions for the file newtext to 666."
-
-read option
-
-case $option in
+echo "1..create a file and stores values in it"
+echo "2..display the contents of files"
+echo "3..delete Directories"
+echo "4..sort a numeric File"
+echo "5..change the permission of file to 666"
+echo "Enter your choice"
+read choice
+case $choice in
     1)
-        echo "John Doe, 25, 123 Main Street" > text.txt
-        echo "File 'text' created with sample information."
+        echo "Creating filleee..."
+        touch file.txt
+        echo "Name : Akshay \n Age : 20 \n Location : Ahmedabad" > file.txt
+        echo "Done."
     ;;
-    
     2)
-        echo "Contents of 'text' file:"
-        cat text
+        cat file.txt
     ;;
-    
     3)
-        echo "Deleting directories mydir and newdir at once."
-        rm -r mydir newdir
+        mkdir test_dir
+        echo "created test_dir for testing"
+        sleep 3
+        rm -rf test_dir
     ;;
-    
     4)
-        echo -e "5\n2\n10\n1\n7" > numericfile
-        echo "Contents of 'numericfile' before sorting:"
-        cat numericfile
-        sort -n -o numericfile numericfile
-        echo "Contents of 'numericfile' after sorting numerically:"
-        cat numericfile
+        sort numeric.txt > sorted_numeric.txt
     ;;
-    
     5)
-        touch newtext
-        chmod 666 newtext
-        echo "Permissions for 'newtext' changed to 666."
-        ls -l newtext
+        chmod 666 file.txt
     ;;
-    
     *)
-        echo "Invalid option"
+        echo "Invalid Choice"
     ;;
 esac

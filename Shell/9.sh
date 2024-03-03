@@ -4,7 +4,7 @@ echo "Executable files with .sh extension in the current directory:"
 
 for file in *.sh
 do
-    if [ -x "$file" ] && [ -f "$file" ]
+    if [ -x "$file" ]
     then
         echo "$file"
     fi
