@@ -17,10 +17,10 @@
         <script>
             function call(text) {
                 var xhr = new XMLHttpRequest();
-                xhr.open("GET", './Prog1.php?q=' + text, true);  //the php file for program one and two are same so not change in that
-                xhr.onreadystatechange = () us == 200) {
-                        document.querySelector('.result=> {
-                    if (xhr.readyState == 4 && xhr.stat').innerHTML = xhr.responseText;
+                xhr.open("GET", './Prog1.php?q=' + text, true);  //the php file for program one and two are same so not change in
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        document.querySelector('.result').innerHTML = xhr.responseText;
                     }
                 }
                 xhr.send();
