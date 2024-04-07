@@ -29,3 +29,4 @@ print_r($Array);
 //Remeber It Modifies The Current Array It mean it changes The Original Array
 //YOU CAN ALSO USE SORT FUNCTION TO SORT ARRAY IN ACCESSDING ORDER AND RSORT TO SORT ARRAY DESENDING ORDER
 
+//using sort and asort function

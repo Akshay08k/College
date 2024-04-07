@@ -27,8 +27,6 @@
         $result = mysqli_query($con, $query);
 
         if ($result) {
-
-
             // Check if any rows were returned
             if ($row = mysqli_fetch_assoc($result)) {
                 // Display product details

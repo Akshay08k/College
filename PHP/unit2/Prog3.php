@@ -8,8 +8,12 @@ $query = "CREATE TABLE PRODUCTS4(
     QOH varchar(20) not null
     )";
 $result = mysqli_query($con, $query);
-if ($result = 1) {
+//the mysqli_query() function returns one if operation successful otherwise return error
+// so if result == 1 than the operation is successfull
+if ($result == 1) {
     echo "<br><h3>Table created successFully</h3></br>";
+} else {
+    echo "<br><h3>Some Error Occured</h3>";
 }
 
 //Check that Db1 already created in database than run the program 
