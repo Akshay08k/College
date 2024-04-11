@@ -29,7 +29,7 @@ while true; do
     case $choice in
         1)
             echo "Displaying all words of the file in ascending order:"
-            cat "$filename" | tr -s '[:space:]' '\n' | sort
+            cat "$filename" | tr -s '[:space:]' | sort
         ;;
         2)
             echo "Displaying the file in descending order:"

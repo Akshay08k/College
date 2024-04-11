@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter the filename:"
+echo "Enter the filename here:"
 read filename
 
 if [ -e "$filename" ]; then

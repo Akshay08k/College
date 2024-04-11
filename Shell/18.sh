@@ -19,10 +19,9 @@ file2="$2"
 
 # i. Displaying the contents of file (file1)
 echo "Displaying the contents of file: $file1"
-more "$file1"
+cat "$file1"
 
-# ii. Copy the contents of the first argument to the second argument
-cp "$file1" "$file2"
+cat "$file1" > "$file2"
 
 # iii. Display the message: "File copied successfully."
 echo "File copied successfully."

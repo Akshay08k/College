@@ -14,3 +14,4 @@ echo "Files combined horizontally. Result saved in '$output_file'_horizontal.txt
 
 cat "$file1" "$file2" > "$output_file"_vertical.txt
 echo "Files combined vertically. Result saved in '$output_file'_vertical.txt"
+    

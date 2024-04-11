@@ -3,7 +3,8 @@
 echo "Subdirectories in the current working directory:"
 for dir in */
 do
-    if [ -d "$dir" ]; then
+#     if [ -d "$dir" ];
+#     then
         echo "$dir"
-    fi
+#     fi
 done

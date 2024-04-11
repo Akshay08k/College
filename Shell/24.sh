@@ -10,7 +10,7 @@ file2="$2"
 
 if [ ! -e "$file1" ] || [ ! -e "$file2" ]; then
     echo "Error: Both files must exist."
-    exit 1
+    exit 1  
 fi
 
 if cmp -s "$file1" "$file2"; then

@@ -12,5 +12,5 @@ if [ ! -e "$filename" ]; then
     exit 1
 fi
 
-permissions=$(ls -l "$filename" | awk '{print $1}')
+permissions=$(ls -l "$filename" | cut -d' ' -f1)
 echo "Permissions of '$filename': $permissions"

@@ -25,6 +25,7 @@ case $option in
         echo "Enter destination directory:"
         read destination
         cp -i "$source" "$destination"
+        echo "the file copying is successful"
     ;;
     
     4)

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [$#]
-then
-    ls $1 | cat $1
-else
-    ls $HOME
-fi
+    if [ $# = 1 ];
+    then
+        ls $1 
+    else
+        ls $HOME
+    fi 

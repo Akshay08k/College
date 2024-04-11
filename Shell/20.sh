@@ -1,10 +1,12 @@
+#!/bin/bash
+
+
 # Write a shell script that displays the following menu and acts accordingly
 # 1. Concatenates twostrings
 # 2. Renames afile
 # 3. Deletes afile.
 # 4. Copy the file to specific location
 
-#!/bin/bash
 
 while true; do
     # Display menu

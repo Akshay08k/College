@@ -1,14 +1,10 @@
 #!/bin/bash
 
-cd
-y="111666666"
-c='c'
-for i in $(ls)
-do
-    if [ -f "$i" ]; then
-        x=$(echo "$i" | cut -c 1)
-        if [ "$x" = "$c" ]; then
-            mv -f "$i" "$i$y"
-        fi
-    fi
+# Navigate to the home directory
+cd "$HOME" || exit
+
+# Rename all files starting with 'c'
+for file in c*; do
+    mv "$file" "${file}111"
+    echo "Renamed $file to ${file}111"
 done

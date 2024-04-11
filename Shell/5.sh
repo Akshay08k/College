@@ -17,8 +17,8 @@ case $choice in
     ;;
     3)
         mkdir test_dir
-        echo "created test_dir for testing"
-        sleep 3
+        echo "created test_dir for testing visit the folder now(IT DELETED AFTER 10 SECONDS)"
+        sleep 10
         rm -rf test_dir
     ;;
     4)
