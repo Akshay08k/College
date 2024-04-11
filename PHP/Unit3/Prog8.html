@@ -32,10 +32,13 @@
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         document.getElementById("result").innerHTML = xhr.responseText;
+                    } else if (xhr.status == 404) {
+                        document.getElementById("result").innerHTML = "Sorry cant able to save data server error occured";
+                    } else {
+                        var params = "stuId=" + stuId + "&stuName=" + stuName + "&mob=" + mob + "&country=" + country;
                     }
-                };
-                var params = "stuId=" + stuId + "&stuName=" + stuName + "&mob=" + mob + "&country=" + country;
-                xhr.send(params);
+                    xhr.send(params);
+                }
             }
         </script>
     </form>

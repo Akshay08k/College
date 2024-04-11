@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form method="post">
         <br>
-        <label for="name">Enter The Name : <input type="text" name="name" id="name"></label><br> <br>
-        <label for="email">Enter The Email : <input type="email" name="email" id="email"></label> <br> <br>
+        <label for="name">Enter The Name : </label><input type="text" name="name" id="name"><br> <br>
+        <label for="email">Enter The Email : </label><input type="email" name="email" id="email"> <br> <br>
         <input type="submit" value="Submit">
     </form>
     <?php

@@ -1,5 +1,8 @@
 <?php
-$con = mysqli_connect('localhost', 'root', '', 'db1');
+$con = mysqli_connect('localhost', 'root', '', 'PHPtest');
+if ($con->connect_error) {
+    echo "Error while connecting to database";
+}
 echo "Connection Success";
 $query = "CREATE TABLE PRODUCTS4(
     Pro_id int Auto_Increment Primary key,

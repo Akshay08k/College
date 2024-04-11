@@ -1,11 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "student";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+$conn = mysqli_connect('localhost', 'root', 'ygiS', 'student');
+// i Dont know why people use this when any error occured in connection mysqli_connect will self throw and 
+// print an error message this message is never executed
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
